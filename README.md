@@ -2,6 +2,7 @@
 
 Наберите в терминале следуюшие команды:
 ### `git clone https://github.com/YuriyPimenov/GameMemoryReact.git`
+### `cd GameMemoryReact`
 ### `npm install`
 ### `npm start`
 
