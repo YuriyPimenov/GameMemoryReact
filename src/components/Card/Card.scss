@@ -1,0 +1,41 @@
+$size: 80px;
+/* весь контейнер поддерживает перспективу */
+.flip-container {
+      perspective: 1000;
+      width: $size;
+      height: $size;
+      .front, .back {
+            width: $size;
+            height: $size;
+      }
+
+      /* скройте обратную сторону во время переворота */
+      .front, .back {
+            backface-visibility: hidden;
+            position: absolute;
+            top: 0;
+            left: 0;
+      }
+
+      /* лицевая сторона размещена над обратной */
+      .front {
+            z-index: 2;
+      }
+
+      /* обратная, изначально скрытая сторона */
+      .back {
+            transform: rotateY(180deg);
+      }
+
+      /* здесь находится скорость перевертывания */
+      .flipper {
+            transition: 0.6s;
+            transform-style: preserve-3d;
+            position: relative;
+      }
+ }
+/* переверните сторону при проведении мышью  .flip-container:hover .flipper,  */
+.flip-container.hover .flipper {
+      transform: rotateY(180deg);
+}
+  

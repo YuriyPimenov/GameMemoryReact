@@ -1,0 +1,54 @@
+.Header{
+    background-color: #263238;
+    color: white;
+    width: 100%;
+    height: 47px;
+    // display: grid;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+
+    .Header-player{
+        display: grid;
+        justify-items: left;
+        padding-left: 15px;
+        pointer-events: none;
+    }
+
+    .Header-timer{
+        display: grid;
+        justify-items: center;
+        pointer-events: none;
+    }
+
+    .Header-buttons{
+        display: grid;
+        justify-items: right;
+        padding-right: 15px;
+        grid-template-columns: 1fr 80px 80px;
+        .Header-button{
+            padding-left: 10px;
+            padding-right: 10px;
+            cursor: pointer;
+            height: 47px;
+            display: grid;
+            align-content: center;
+            
+        }
+        .Header-button:hover{
+            background-color: #1C2429;
+        }
+        .Header-buttons__rename{
+            grid-column: 2;
+        }
+        .Header-buttons__restart{
+            grid-column: 3;
+            
+        }
+    }
+}

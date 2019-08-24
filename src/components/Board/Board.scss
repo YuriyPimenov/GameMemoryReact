@@ -1,0 +1,28 @@
+.Board{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: repeat(6, 80px);
+    grid-template-rows: repeat(6, 80px);
+    height: 100%;
+    grid-gap: 10px;
+    .Board-Card{        
+        // background-color: chocolate;
+        cursor: pointer;
+        border-radius: 3px;
+
+
+    }
+    .Board-Card--hide{
+        visibility: hidden;
+    }
+    
+}
+.Notice{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    padding: 100px;
+    font-weight: bold;
+    font-size: 32px;
+}
