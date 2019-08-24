@@ -1,4 +1,4 @@
-## Available Scripts
+## Инструкция по развертыванию приложения
 
 Наберите в терминале следуюшие команды:
 ### `git clone https://github.com/YuriyPimenov/GameMemoryReact.git`
