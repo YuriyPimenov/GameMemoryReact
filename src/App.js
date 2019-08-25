@@ -16,7 +16,6 @@ class App extends Component {
   componentDidMount=()=>{
     var players = JSON.parse(localStorage.getItem("players"));
     if(players===null || players===undefined) players={};
-    console.log(11,players);
     this.setState({players: players});
   }
 
@@ -27,7 +26,6 @@ class App extends Component {
     this.setState({result: (this.state.result + 1)})
   }
   onFinish=()=>{
-    console.log('Finish!!');
 
     var players = {...this.state.players, [this.state.selectedPlayer]:this.state.result};
     var playersStr = JSON.stringify(players); 

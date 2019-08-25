@@ -32,7 +32,6 @@ class Board extends Component {
         })
         let images = [...positiveImages, ...negativeImages];        
         let listImages = this.getImagesByIndex(images,mixIndexes);
-        console.log(listImages);
         this.setState({
             listFinded:[],
             selectedImg1:0,
@@ -84,7 +83,7 @@ class Board extends Component {
         
     }
     handlerFirstClick=(id)=>{
-        if(id===this.state.selectedImg1)
+        if(id===this.state.selectedImg1 || id===this.state.selectedImg2)
             return;
 
         clearTimeout(this.timer);
@@ -97,12 +96,11 @@ class Board extends Component {
         this.setState({selectedImg1:id, click:1});
     }
     handlerSecondClick=(id)=>{
-        if(id===this.state.selectedImg2)
+        if(id===this.state.selectedImg1 || id===this.state.selectedImg2)
             return;
 
         clearTimeout(this.timer);
         this.timer = setTimeout(()=>{
-            console.log('second timer',this.state);
             if(Math.abs(this.state.selectedImg1) === Math.abs(this.state.selectedImg2)){
                 let listFinded = [...this.state.listFinded, this.state.selectedImg1,this.state.selectedImg2];
                 if(listFinded.length===36){
